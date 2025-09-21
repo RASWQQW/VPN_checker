@@ -29,7 +29,7 @@
         {
             "server": "server_ip",//server ip address
             "server_port": 8388,//server port
-            "local_address":"127.0.0.1",//local address
+            "local_address":"0.0.0.0",//local address
             "local_port":1080,//local port
             "port_password":{ //multiple port
                     "9001":"password9001",
@@ -44,7 +44,7 @@
         - Explanation:
             - "server": "123.123.123.123" :: server ip address
             - "server_port": 8388 :: server port
-            - "local_address":"127.0.0.1" :: local ip address
+            - "local_address":"0.0.0.0" :: local ip address
             - "local_port":1080, :: local port
             - "port_password" :: port and password
             - "password": "password" :: password
@@ -151,7 +151,7 @@
 			{
 				"server":"server-ip",
 				"server_port":8000,
-				"local_address": "127.0.0.1",
+				"local_address": "0.0.0.0",
 				"local_port":1080,
 				"password":"your-password",
 				"timeout":600,
@@ -185,7 +185,7 @@
 			logSyslog = true
 			logFile = /var/log/polipo/polipo.log
 			proxyAddress = "0.0.0.0"
-			socksParentProxy = "127.0.0.1:1080"
+			socksParentProxy = "0.0.0.0:1080"
 			socksProxyType = socks5
 			chunkHighMark = 50331648
 			objectHighMark = 16384
@@ -199,8 +199,8 @@
 
 		- Export http_proxy and https_proxy
 		    ```shell
-			export http_proxy="http://127.0.0.1:8123/"
-	 		export https_proxy="https://127.0.0.1:8123/"
+			export http_proxy="http://0.0.0.0:8123/"
+	 		export https_proxy="https://0.0.0.0:8123/"
 			```
 		- Testing
 			`curl www.google.com`
