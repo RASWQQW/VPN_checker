@@ -1,0 +1,1 @@
+web: ssserver -s 0.0.0.0:$PORT -k <password> -m aes-256-gcm
